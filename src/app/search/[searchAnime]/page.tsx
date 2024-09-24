@@ -1,11 +1,11 @@
 import CardsList from "@/components/Cards/CardsList";
-import { useFetchAnime } from "@/libs/useFetchAnime";
+import { FetchAnime } from "@/libs/FetchAnime";
 
 const Page = async ({ params }: { params: { searchAnime: string } }) => {
   const searchParams = params.searchAnime;
 
   // Ambil data di sini
-  const data = await useFetchAnime(`/anime?q=${searchParams}`);
+  const data = await FetchAnime(`/anime?q=${searchParams}`);
 
   console.log(data);
 

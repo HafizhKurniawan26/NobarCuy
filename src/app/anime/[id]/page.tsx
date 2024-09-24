@@ -4,7 +4,7 @@ import CommentBox from "@/components/CommentBox/CommentBox";
 import RekomendedStatic from "@/components/RecommendedAnime/RekomendedStatic";
 import { authUserSession } from "@/libs/authLibs";
 import prisma from "@/libs/prisma";
-import { useFetchAnime } from "@/libs/useFetchAnime";
+import { FetchAnime } from "@/libs/FetchAnime";
 import Image from "next/image";
 import React from "react";
 import { FaStar } from "react-icons/fa";
@@ -14,7 +14,7 @@ import { TbMovie } from "react-icons/tb";
 
 const DetailPage = async ({ params }: { params: { id: string } }) => {
   const id = params.id;
-  const { data } = await useFetchAnime(`/anime/${id}/full`);
+  const { data } = await FetchAnime(`/anime/${id}/full`);
   const user = await authUserSession();
 
   const commentUser = await prisma.comment.findMany({

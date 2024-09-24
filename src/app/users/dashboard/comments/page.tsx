@@ -4,7 +4,6 @@ import { authUserSession } from "@/libs/authLibs";
 import prisma from "@/libs/prisma";
 import { Card, CardBody } from "@nextui-org/react";
 import React from "react";
-import { FaTrashAlt } from "react-icons/fa";
 
 const page = async () => {
   const user = await authUserSession();

@@ -1,6 +1,6 @@
 "use client";
 
-import { useFetchAnime, useFetchNested } from "@/libs/useFetchAnime";
+import { FetchAnime, FetchNested } from "@/libs/FetchAnime";
 import { useEffect, useState } from "react";
 import { divider } from "@nextui-org/react";
 import Image from "next/image";
@@ -11,7 +11,7 @@ const RekomendedStatic = ({ totalCard }: { totalCard: number }) => {
   const [dataAnime, setDataAnime] = useState([]);
 
   const fetchData = async () => {
-    let resData = await useFetchNested(`/recommendations/anime`);
+    let resData = await FetchNested(`/recommendations/anime`);
     setDataAnime(resData);
   };
 

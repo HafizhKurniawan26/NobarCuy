@@ -1,7 +1,7 @@
 "use client";
 import CardsList from "@/components/Cards/CardsList";
 import { scrollTop } from "@/libs/scrollTop";
-import { useFetchAnime } from "@/libs/useFetchAnime";
+import { FetchAnime } from "@/libs/FetchAnime";
 import { Pagination } from "@nextui-org/react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -12,7 +12,7 @@ export default function PopulerPage() {
 
   useEffect(() => {
     const fetchApi = async () => {
-      const data = await useFetchAnime(`/top/anime?page=${currentPage}`);
+      const data = await FetchAnime(`/top/anime?page=${currentPage}`);
       setDataAnime(data);
     };
 

@@ -2,8 +2,6 @@ import Cards from "@/components/Cards/Cards";
 import Header from "@/components/Header";
 import { authUserSession } from "@/libs/authLibs";
 import prisma from "@/libs/prisma";
-import { useFetchAnime } from "@/libs/useFetchAnime";
-import { revalidatePath } from "next/cache";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";

@@ -3,7 +3,7 @@ import Header from "@/components/Header";
 import RekomendedStatic from "@/components/RecommendedAnime/RekomendedStatic";
 import Rekomended from "@/components/RecommendedAnime/RekomendedStatic";
 import RekomendedSwiper from "@/components/RecommendedAnime/RekomendedSwiper";
-import { useFetchAnime } from "@/libs/useFetchAnime";
+import { useFetchAnime } from "@/libs/FetchAnime";
 import { Navbar } from "@nextui-org/react";
 import Link from "next/link";
 import { FaArrowRightLong } from "react-icons/fa6";
